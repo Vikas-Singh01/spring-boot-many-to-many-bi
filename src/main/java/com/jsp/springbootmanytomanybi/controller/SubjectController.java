@@ -43,8 +43,8 @@ public class SubjectController
 	}
 	
 	
-	@PutMapping("/updateDetails/{subjectId}")
-	public String updateSubjectStudent(@PathVariable int subjectId,@RequestBody int studentId,@RequestBody Subjects subjects,@RequestBody Students students)
+	@PutMapping("/updateDetails/{subjectId}/{studentId}")
+	public String updateSubjectStudent(@PathVariable int subjectId,@PathVariable int studentId,@RequestBody Subjects subjects,@RequestBody Students students)
 	{
 		return subjectService.updateSubjectStudent(subjectId, studentId, subjects, students);
 	}
